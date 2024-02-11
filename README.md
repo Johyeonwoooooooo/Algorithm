@@ -1,7 +1,7 @@
 # BaekJoon
 Solving Baekjoon's algorithm and Programers
 --------------------------------------------------
-諛깆?? ????씠, ?봽濡쒓렇?옒癒몄뒪 ????씠 (23.07.20 start)
+백준, 프로그래머스 등 알고리즘 문제 풀이 (23.07.20 start)
 
-?봽濡쒓렇?옒癒몄뒪
+프로그래머스 commit comment 양식
 commit comment : " Level${level} : ${Probelm Names} "
