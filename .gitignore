@@ -1,5 +1,6 @@
 .vscode
 .venv
+.idea
 
 input.txt
 output.txt
