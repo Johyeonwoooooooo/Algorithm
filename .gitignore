@@ -1,0 +1,8 @@
+.vscode
+.venv
+
+input.txt
+output.txt
+
+__pycache__/
+*.py[cod]
