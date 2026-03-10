@@ -7,3 +7,5 @@ output.txt
 
 __pycache__/
 *.py[cod]
+
+test.py
