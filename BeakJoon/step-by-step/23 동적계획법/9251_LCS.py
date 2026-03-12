@@ -30,31 +30,22 @@ CAPCAK => 2번째 4번째 5번째
 import sys
 input = sys.stdin.readline
 
-first = input().strip()
-second = input().strip()
+w1 = input().strip()
+w2 = input().strip()
 
-first_n = len(first)
+len_w1, len_w2 = len(w1), len(w2)
+d = [0] * len_w2
 
-dp = [0 for _ in range(first_n)]
-index_list = [0 for _ in range(first_n + 1)]
+for i in range(len_w1):
+    tmp = 0 # 임시로 받을 변수
+    for j in range(len_w2):
+        if tmp < d[j]: # 더 긴 LCS를 발견하였다면, 값을 수정
+            tmp = d[j]
+        elif w1[i] == w2[j]:
+            d[j] = tmp + 1
+    print(d)
 
-for i in range(first_n):
-    second_index = second[index_list[i]:].find(first[i])
-    if i == 0:
-        if second_index != -1:
-            dp[i] = 1
-            index_list[i+1] = second_index + 1
-        else:
-            dp[i] = 0
-    else:
-        if second_index != -1:
-            dp[i] = dp[i-1] + 1
-            index_list[i+1] = index_list[i] + second_index + 1
-        else:
-            dp[i] = dp[i-1]
-            index_list[i+1] = index_list[i]
-
-print(max(dp))
+print(max(d))
 
 """
 dp 2개? 2차원?
